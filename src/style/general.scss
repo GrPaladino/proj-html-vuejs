@@ -3,3 +3,28 @@
 
 // # Bootstrap scss
 @import "bootstrap/scss/bootstrap";
+
+body {
+  background-color: $mainBgColor;
+  color: $mainGrey;
+
+  // Font
+  font-family: "Abel", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9rem;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .container {
+    max-width: 1080px;
+  }
+}
