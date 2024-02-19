@@ -42,7 +42,7 @@ export default {
         <div class="links">
           <ul>
             <li v-for="(link, index) in links">
-              <a :class="index == 0 ? 'yellow' : ''" href="#">{{ link }}</a>
+              <a href="#">{{ link }}</a>
             </li>
           </ul>
         </div>
@@ -75,6 +75,17 @@ export default {
 <style lang="scss" scoped>
 .header {
   min-height: 100px;
+
+  ul {
+    display: flex;
+
+    li {
+      margin-right: 2rem;
+    }
+    li:hover {
+      color: #f9aa00;
+    }
+  }
   .upper-header {
     height: 30%;
     border-bottom: 1px solid grey;
@@ -85,11 +96,8 @@ export default {
       justify-content: space-between;
       align-items: center;
 
-      ul {
-        display: flex;
-        li {
-          margin-right: 2rem;
-        }
+      li {
+        margin-right: 2rem;
       }
     }
   }
@@ -107,14 +115,8 @@ export default {
         max-width: 300px;
       }
 
-      ul {
-        display: flex;
-        li {
-          margin-right: 2rem;
-          .yellow {
-            color: #f9aa00;
-          }
-        }
+      .yellow {
+        color: #f9aa00;
       }
     }
   }
