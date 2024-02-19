@@ -18,4 +18,21 @@ export const store = reactive({
       img: "cms-banner-02.jpg",
     },
   ],
+
+  specials: [
+    {
+      img: "category2.jpg",
+      name: "Batman",
+    },
+
+    {
+      img: "category1.jpg",
+      name: "Bayonetta",
+    },
+
+    {
+      img: "category3.jpg",
+      name: "Dark Souls",
+    },
+  ],
 });

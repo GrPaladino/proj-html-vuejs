@@ -1,5 +1,6 @@
 <script>
 import { store } from "../store";
+
 export default {
   data() {
     return { store };
@@ -23,7 +24,7 @@ export default {
 
 <style lang="scss" scoped>
 .game {
-  height: 200px;
+  min-height: 200px;
   position: relative;
 
   .info {
@@ -38,6 +39,7 @@ export default {
       font-weight: bolder;
       padding: 5px 10px;
       text-align: center;
+      font-style: italic;
     }
 
     h3 {

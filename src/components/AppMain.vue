@@ -1,6 +1,8 @@
 <script>
 import AppHero from "./AppHero.vue";
 import AppCard12 from "./AppCard1-2.vue";
+import AppCard from "./AppCard.vue";
+
 import { store } from "../store";
 
 export default {
@@ -35,6 +37,7 @@ export default {
   components: {
     AppHero,
     AppCard12,
+    AppCard,
   },
 };
 </script>
@@ -61,6 +64,18 @@ export default {
       />
     </div>
   </div>
+
+  <section class="category container">
+    <h2>Special Category</h2>
+    <div class="line"></div>
+    <div class="row g-3">
+      <app-card
+        v-for="special in store.specials"
+        :product="special"
+        class="col-4"
+      />
+    </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>
@@ -105,6 +120,19 @@ export default {
         }
       }
     }
+  }
+}
+
+section.category {
+  text-align: center;
+  color: white;
+  margin-top: 3rem;
+
+  .line {
+    max-width: 50px;
+    height: 3px;
+    background-color: #f7ab00;
+    margin: 1rem auto;
   }
 }
 </style>
