@@ -18,10 +18,27 @@ import {
   faMagnifyingGlass,
   faUser,
   faBagShopping,
+  faStar,
+  faHeart,
+  faMaximize,
+  faEye,
+  faChevronLeft,
+  faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 
 // * add icons to the library */
-library.add(faChevronDown, faMagnifyingGlass, faUser, faBagShopping);
+library.add(
+  faChevronDown,
+  faMagnifyingGlass,
+  faUser,
+  faBagShopping,
+  faStar,
+  faHeart,
+  faMaximize,
+  faEye,
+  faChevronLeft,
+  faChevronRight
+);
 
 import App from "./App.vue";
 

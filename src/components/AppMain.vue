@@ -2,6 +2,7 @@
 import AppHero from "./AppHero.vue";
 import AppCard12 from "./AppCard1-2.vue";
 import AppCategoryCard from "./AppCategoryCard.vue";
+import AppProductCard from "./AppProductCard.vue";
 
 import { store } from "../store";
 
@@ -38,6 +39,7 @@ export default {
     AppHero,
     AppCard12,
     AppCategoryCard,
+    AppProductCard,
   },
 };
 </script>
@@ -74,6 +76,39 @@ export default {
         :product="special"
         class="col-4"
       />
+    </div>
+  </section>
+
+  <section class="product">
+    <h2>Our Products</h2>
+    <div class="line"></div>
+    <div class="toggle">
+      <h4>Feature</h4>
+      <h4>New Arrival</h4>
+      <h4>Best Sellers</h4>
+    </div>
+    <div class="container">
+      <div class="row g-3 product-line">
+        <app-product-card
+          v-for="product in store.products"
+          :product="product"
+          class="col-3"
+        />
+        <div class="arrow arrow-left">
+          <font-awesome-icon
+            icon="fa-solid fa-chevron-left"
+            size="lg"
+            class="icon"
+          />
+        </div>
+        <div class="arrow arrow-right">
+          <font-awesome-icon
+            icon="fa-solid fa-chevron-right"
+            size="lg"
+            class="icon"
+          />
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -128,7 +163,8 @@ export default {
   }
 }
 
-section.category {
+section.category,
+section.product {
   text-align: center;
   color: $mainWhite;
   margin: 3rem auto;
@@ -138,6 +174,58 @@ section.category {
     height: 3px;
     background-color: $mainYellow;
     margin: 1rem auto;
+  }
+}
+
+.product {
+  .toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    margin: 0 auto;
+
+    h4 {
+      width: calc(100% / 3);
+      padding: 15px;
+      border: 1px solid rgb(63, 62, 62);
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+    }
+  }
+  .product-line {
+    overflow-x: hidden;
+    flex-wrap: nowrap;
+
+    position: relative;
+
+    .arrow.arrow-left {
+      position: absolute;
+      top: 34%;
+    }
+    .arrow.arrow-right {
+      position: absolute;
+      top: 34%;
+      right: 0;
+    }
+
+    .arrow:hover {
+      color: $mainYellow;
+      border: 1px solid $mainYellow;
+    }
+
+    .arrow {
+      border-radius: 50%;
+      border: 1px solid $mainGrey;
+
+      width: 30px;
+      height: 30px;
+
+      .icon {
+        margin: auto;
+        padding-top: 5px;
+      }
+    }
   }
 }
 </style>

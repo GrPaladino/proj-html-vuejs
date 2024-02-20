@@ -27,8 +27,8 @@ export default {
 
 <template>
   <div
-    @mouseenter="getHoverVisible()"
-    @mouseleave="getHoverHide()"
+    @mouseenter="this.getHoverVisible()"
+    @mouseleave="this.getHoverHide()"
     class="wrapper"
   >
     <img :src="store.getImage(product.img)" alt="" />
@@ -50,10 +50,11 @@ export default {
   position: relative;
 
   .bottom {
-    width: 100%;
     height: 20%;
     position: absolute;
     bottom: 0;
+    right: 8px;
+    left: 8px;
     background-color: rgba(0, 0, 0, 0.6);
     text-align: start;
     padding: 15px;
