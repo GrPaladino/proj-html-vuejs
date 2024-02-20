@@ -109,6 +109,13 @@ export default {
           />
         </div>
       </div>
+      <div class="row">
+        <app-card12
+          v-for="game in store.secondaryGames"
+          :product="game"
+          class="col-6"
+        />
+      </div>
     </div>
   </section>
 </template>
@@ -191,6 +198,10 @@ section.product {
       border: 1px solid rgb(63, 62, 62);
       font-size: 0.9rem;
       margin-bottom: 2rem;
+    }
+
+    h4:hover {
+      color: $mainYellow;
     }
   }
   .product-line {

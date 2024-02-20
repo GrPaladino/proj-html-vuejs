@@ -34,7 +34,7 @@ export default {
     top: 80px;
 
     h4 {
-      max-width: 160px;
+      max-width: 180px;
       background-color: $mainYellow;
       color: black;
       font-weight: bolder;
@@ -45,9 +45,11 @@ export default {
 
     h3 {
       font-size: 2rem;
+      text-align: start;
       font-weight: bold;
       max-width: 270px;
       padding: 5px 18px;
+      padding-left: 0;
       margin-top: 10px;
 
       color: $mainWhite;

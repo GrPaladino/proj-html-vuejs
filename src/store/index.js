@@ -19,6 +19,20 @@ export const store = reactive({
     },
   ],
 
+  secondaryGames: [
+    {
+      category: "20% Discount",
+      name: "Dragon's Dogma Video Game",
+      img: "cms-banner-03.jpg",
+    },
+
+    {
+      category: "30% Discount",
+      name: "World of Tanks New Game",
+      img: "cms-banner-04.jpg",
+    },
+  ],
+
   specials: [
     {
       img: "category2.jpg",
