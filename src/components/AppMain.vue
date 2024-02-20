@@ -158,6 +158,31 @@ export default {
       </div>
     </div>
   </section>
+
+  <section class="web-designer">
+    <div class="container">
+      <div class="img-tag">
+        <img src="../assets/img/t5-1-100x100_left.jpg" alt="" />
+        <div class="quote">
+          <img src="../assets/img/quote.png" alt="" />
+        </div>
+      </div>
+      <div class="name">
+        <span class="me-2">Luies Charles</span>
+        <span class="yellow">(Web Designer)</span>
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, aut!
+        Veritatis asperiores, quidem quasi dicta excepturi numquam tenetur
+        blanditiis adipisci quia, incidunt porro sunt ea perferendis odit
+        quibusdam? Dolorum, exercitationem? Lorem ipsum dolor sit amet,
+        consectetur adipisicing elit. Itaque necessitatibus totam minima
+      </p>
+      <div class="dots">
+        <div v-for="i in 3" class="dot"></div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>
@@ -294,6 +319,83 @@ section.deal {
       .icon {
         margin: auto;
         padding-top: 5px;
+      }
+    }
+  }
+}
+
+.web-designer {
+  height: 500px;
+  background-image: url("../assets/img/parallax.jpg");
+  background-size: cover;
+  background-position: bottom;
+
+  .container {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .img-tag {
+      width: 100px;
+      height: 100px;
+
+      position: relative;
+
+      img {
+        border-radius: 50%;
+        border: 2px solid $mainYellow;
+      }
+
+      .quote {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 13px;
+        left: -13px;
+
+        img {
+          border-radius: 50%;
+          background-color: $mainYellow;
+          padding: 4px;
+        }
+      }
+    }
+
+    .name {
+      margin-top: 2rem;
+      color: $mainWhite;
+      font-size: 0.9rem;
+      font-weight: bolder;
+
+      .yellow {
+        color: $mainYellow;
+      }
+    }
+
+    p {
+      max-width: 800px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: $mainGrey;
+      margin: 2rem 0;
+    }
+
+    .dots {
+      @include d-flex-center;
+
+      .dot {
+        width: 10px;
+        height: 10px;
+        background-color: $mainWhite;
+        border-radius: 50%;
+        margin: 0 5px;
+      }
+
+      .dot:hover {
+        background-color: $mainYellow;
       }
     }
   }
