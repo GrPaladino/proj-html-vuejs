@@ -149,4 +149,33 @@ export const store = reactive({
       fullPrice: "",
     },
   ],
+
+  blogCards: [
+    {
+      img: "Nisi-ut-aliquid-ex-ea-com.jpg",
+      date: "Jan 18, 2021",
+      comment: "0 Comment",
+      name: "Anyway REPS is a NYC agency repres enting photographers",
+    },
+    {
+      img: "Illo-inventore-veritatis-quasi.jpg",
+      date: "May 30, 2021",
+      comment: "0 Comment",
+      name: "Nasual risus suscipit Lorem Ipsum is simply text",
+    },
+    {
+      img: "At-vero-eos-et-accusamus.jpg",
+      date: "Apr 13, 2021",
+      comment: "0 Comment",
+      name: "Nostrum Iesum Christum Lorem Ipsus is simply text",
+    },
+  ],
+
+  brandIcons: [
+    "brand-01.png",
+    "brand-02.png",
+    "brand-03.png",
+    "brand-04.png",
+    "brand-05.png",
+  ],
 });

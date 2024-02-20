@@ -3,6 +3,7 @@ import AppHero from "./AppHero.vue";
 import AppCard12 from "./AppCard1-2.vue";
 import AppCategoryCard from "./AppCategoryCard.vue";
 import AppProductCard from "./AppProductCard.vue";
+import AppBlogCard from "./AppBlogCard.vue";
 
 import { store } from "../store";
 
@@ -32,6 +33,8 @@ export default {
           img: "hand-holding-dollar-solid.svg",
         },
       ],
+
+      hover: false,
     };
   },
 
@@ -40,6 +43,17 @@ export default {
     AppCard12,
     AppCategoryCard,
     AppProductCard,
+    AppBlogCard,
+  },
+
+  methods: {
+    getHoverVisible() {
+      this.hover = true;
+    },
+
+    getHoverHide() {
+      this.hover = false;
+    },
   },
 };
 </script>
@@ -183,6 +197,45 @@ export default {
       </div>
     </div>
   </section>
+
+  <section class="blog">
+    <h2>New Game Blog</h2>
+    <div class="line"></div>
+    <div class="container blog">
+      <div class="row g-3">
+        <app-blog-card
+          @mouseenter="getHoverVisible()"
+          @mouseleave="getHoverHide()"
+          v-for="card in store.blogCards"
+          :product="card"
+          class="col-4"
+        />
+      </div>
+      <div v-if="hover" class="arrow arrow-left">
+        <font-awesome-icon
+          icon="fa-solid fa-chevron-left"
+          size="lg"
+          class="icon"
+        />
+      </div>
+      <div v-if="hover" class="arrow arrow-right">
+        <font-awesome-icon
+          icon="fa-solid fa-chevron-right"
+          size="lg"
+          class="icon"
+        />
+      </div>
+    </div>
+    <div class="container">
+      <div class="brand-icons row g-3">
+        <img
+          v-for="brand in store.brandIcons"
+          :src="store.getImage(brand)"
+          class="col-2"
+        />
+      </div>
+    </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>
@@ -237,7 +290,8 @@ export default {
 
 section.category,
 section.product,
-section.deal {
+section.deal,
+section.blog {
   text-align: center;
   color: $mainWhite;
   margin: 3rem auto;
@@ -399,5 +453,40 @@ section.deal {
       }
     }
   }
+}
+.container.blog {
+  height: 350px;
+  border-bottom: 1px solid $mainGrey;
+  position: relative;
+
+  .arrow.arrow-left {
+    position: absolute;
+    top: 34%;
+    left: 0;
+  }
+  .arrow.arrow-right {
+    position: absolute;
+    top: 34%;
+    right: 0;
+  }
+
+  .arrow {
+    border-radius: 50%;
+    border: 1px solid $mainGrey;
+
+    width: 30px;
+    height: 30px;
+
+    .icon {
+      margin: auto;
+      padding-top: 5px;
+    }
+  }
+}
+
+.container .brand-icons {
+  height: 200px;
+  @include d-flex-center;
+  justify-content: center;
 }
 </style>

@@ -24,6 +24,10 @@ import {
   faEye,
   faChevronLeft,
   faChevronRight,
+  faCalendarDays,
+  faComments,
+  faPlus,
+  faLink,
 } from "@fortawesome/free-solid-svg-icons";
 
 // * add icons to the library */
@@ -37,7 +41,11 @@ library.add(
   faMaximize,
   faEye,
   faChevronLeft,
-  faChevronRight
+  faChevronRight,
+  faCalendarDays,
+  faComments,
+  faPlus,
+  faLink
 );
 
 import App from "./App.vue";
