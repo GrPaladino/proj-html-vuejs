@@ -4,6 +4,7 @@ import AppCard12 from "./AppCard1-2.vue";
 import AppCategoryCard from "./AppCategoryCard.vue";
 import AppProductCard from "./AppProductCard.vue";
 import AppBlogCard from "./AppBlogCard.vue";
+import AppFooter from "./AppFooter.vue";
 
 import { store } from "../store";
 
@@ -44,6 +45,7 @@ export default {
     AppCategoryCard,
     AppProductCard,
     AppBlogCard,
+    AppFooter,
   },
 
   methods: {
