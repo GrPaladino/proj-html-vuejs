@@ -89,6 +89,9 @@ export default {
     </div>
     <div class="container">
       <div class="row g-3 product-line">
+        <div class="tag">
+          <span>- 44%</span>
+        </div>
         <app-product-card
           v-for="product in store.products"
           :product="product"
@@ -113,8 +116,45 @@ export default {
         <app-card12
           v-for="game in store.secondaryGames"
           :product="game"
-          class="col-6"
+          class="col-6 mb-2"
         />
+      </div>
+    </div>
+  </section>
+
+  <section class="deal">
+    <h2>Deal Of The Day</h2>
+    <div class="line"></div>
+    <div class="toggle">
+      <h4>1026 days</h4>
+      <h4>13 hours</h4>
+      <h4>24 mins</h4>
+      <h4>17 secs</h4>
+    </div>
+    <div class="container">
+      <div class="row g-3 product-line">
+        <div class="tag">
+          <span>- 44%</span>
+        </div>
+        <app-product-card
+          v-for="product in store.productsDeal"
+          :product="product"
+          class="col-3"
+        />
+        <div class="arrow arrow-left">
+          <font-awesome-icon
+            icon="fa-solid fa-chevron-left"
+            size="lg"
+            class="icon"
+          />
+        </div>
+        <div class="arrow arrow-right">
+          <font-awesome-icon
+            icon="fa-solid fa-chevron-right"
+            size="lg"
+            class="icon"
+          />
+        </div>
       </div>
     </div>
   </section>
@@ -171,26 +211,29 @@ export default {
 }
 
 section.category,
-section.product {
+section.product,
+section.deal {
   text-align: center;
   color: $mainWhite;
   margin: 3rem auto;
-
-  .line {
-    max-width: 50px;
-    height: 3px;
-    background-color: $mainYellow;
-    margin: 1rem auto;
-  }
+}
+.line {
+  max-width: 50px;
+  height: 3px;
+  background-color: $mainYellow;
+  margin: 1rem auto;
 }
 
-.product {
+.product,
+.deal {
   .toggle {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 300px;
+    min-width: 300px;
+    max-width: 500px;
     margin: 0 auto;
+    margin-top: 3rem;
 
     h4 {
       width: calc(100% / 3);
@@ -210,6 +253,22 @@ section.product {
 
     position: relative;
 
+    .tag {
+      width: 40px;
+      height: 20px;
+      background-color: $mainYellow;
+      font-size: 0.7rem;
+      padding: 2px 0;
+      margin: 0;
+
+      position: absolute;
+      top: 25px;
+      left: 15px;
+
+      span {
+        color: black;
+      }
+    }
     .arrow.arrow-left {
       position: absolute;
       top: 34%;

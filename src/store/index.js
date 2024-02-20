@@ -103,4 +103,50 @@ export const store = reactive({
       fullPrice: "",
     },
   ],
+
+  productsDeal: [
+    {
+      img: "09-300x300.jpg",
+      imgHover: "06-300x300.jpg",
+      vote: 0,
+      name: "Buddy and Lucky Solitaire",
+      price: "€83.00 - €90.00",
+      fullPrice: "",
+    },
+
+    {
+      img: "04-300x300.jpg",
+      imgHover: "15-300x300.jpg",
+      vote: 4,
+      name: "Shopping Mahjong connect",
+      price: "€100.00",
+      fullPrice: "€180.00",
+    },
+    {
+      img: "02-300x300.jpg",
+      imgHover: "05-300x300.jpg",
+      vote: 5,
+      name: "BangBangShooting",
+      price: "€110.00",
+      fullPrice: "",
+    },
+
+    {
+      img: "11-300x300.jpg",
+      imgHover: "12-300x300.jpg",
+      vote: 2,
+      name: "Labyrinths of the World",
+      price: "€110.00",
+      fullPrice: "",
+    },
+
+    {
+      img: "07-300x300.jpg",
+      imgHover: "08-300x300.jpg",
+      vote: 2,
+      name: "buddy and Lucky Solitaire",
+      price: "€110.00",
+      fullPrice: "",
+    },
+  ],
 });
