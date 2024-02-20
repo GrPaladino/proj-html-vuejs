@@ -1,7 +1,7 @@
 <script>
 import AppHero from "./AppHero.vue";
 import AppCard12 from "./AppCard1-2.vue";
-import AppCard from "./AppCard.vue";
+import AppCategoryCard from "./AppCategoryCard.vue";
 
 import { store } from "../store";
 
@@ -37,7 +37,7 @@ export default {
   components: {
     AppHero,
     AppCard12,
-    AppCard,
+    AppCategoryCard,
   },
 };
 </script>
@@ -46,7 +46,7 @@ export default {
   <app-hero />
   <div class="info-section container">
     <div class="row">
-      <div v-for="info in infos" class="col-3">
+      <div v-for="info in infos" class="col-3 policy-tag">
         <img :src="store.getImage(info.img)" alt="" />
         <div class="info">
           <h6>{{ info.title }}</h6>
@@ -69,7 +69,7 @@ export default {
     <h2>Special Category</h2>
     <div class="line"></div>
     <div class="row g-3">
-      <app-card
+      <app-category-card
         v-for="special in store.specials"
         :product="special"
         class="col-4"
@@ -95,6 +95,7 @@ export default {
     .col-3 {
       display: flex;
       align-items: center;
+
       img {
         width: 20%;
         background-color: $mainWhite;
@@ -102,16 +103,23 @@ export default {
         margin-right: 10px;
       }
 
-      .info {
-        @include d-flex-center;
+      img:hover {
+        background-color: $mainYellow;
+      }
 
+      .info {
         h6 {
           margin: 0;
-          padding: 5px 0;
+          padding: 3px 0;
         }
+
+        h6:hover {
+          color: $mainYellow;
+        }
+
         p {
           margin: 0;
-          padding: 5px 0;
+          padding: 3px 0;
           font-size: 0.8rem;
           color: $mainGrey;
         }
