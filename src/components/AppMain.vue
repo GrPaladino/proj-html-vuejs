@@ -79,35 +79,32 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use "../style/partials/mixins" as *;
+@use "../style/partials/variables" as *;
 .info-section {
   min-height: 100px;
-  color: white;
+  color: $mainWhite;
   padding: 15px 12px;
   font-size: 0.9rem;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include d-flex-center;
   .row {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include d-flex-center;
 
     .col-3 {
       display: flex;
       align-items: center;
       img {
-        width: 25%;
-        background-color: white;
+        width: 20%;
+        background-color: $mainWhite;
         padding: 5px;
         margin-right: 10px;
       }
 
       .info {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        @include d-flex-center;
+
         h6 {
           margin: 0;
           padding: 5px 0;
@@ -116,7 +113,7 @@ export default {
           margin: 0;
           padding: 5px 0;
           font-size: 0.8rem;
-          color: #9b969f;
+          color: $mainGrey;
         }
       }
     }
@@ -125,13 +122,13 @@ export default {
 
 section.category {
   text-align: center;
-  color: white;
-  margin-top: 3rem;
+  color: $mainWhite;
+  margin: 3rem auto;
 
   .line {
     max-width: 50px;
     height: 3px;
-    background-color: #f7ab00;
+    background-color: $mainYellow;
     margin: 1rem auto;
   }
 }

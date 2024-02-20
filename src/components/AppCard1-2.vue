@@ -23,6 +23,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use "../style/partials/variables" as *;
 .game {
   min-height: 200px;
   position: relative;
@@ -34,7 +35,7 @@ export default {
 
     h4 {
       max-width: 160px;
-      background-color: #f7ab00;
+      background-color: $mainYellow;
       color: black;
       font-weight: bolder;
       padding: 5px 10px;
@@ -49,7 +50,7 @@ export default {
       padding: 5px 18px;
       margin-top: 10px;
 
-      color: white;
+      color: $mainWhite;
     }
   }
 }

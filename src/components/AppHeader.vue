@@ -73,6 +73,9 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use "../style/partials/mixins" as *;
+@use "../style/partials/variables" as *;
+
 .header {
   min-height: 100px;
 
@@ -83,7 +86,7 @@ export default {
       margin-right: 2rem;
     }
     li:hover {
-      color: #f9aa00;
+      color: $mainYellow;
     }
   }
   .upper-header {
@@ -92,9 +95,7 @@ export default {
     padding: 10px 0;
 
     .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      @include d-flex-center;
 
       li {
         margin-right: 2rem;
@@ -107,16 +108,14 @@ export default {
     padding: 20px 0;
 
     .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      @include d-flex-center;
 
       .logo {
         max-width: 300px;
       }
 
       .yellow {
-        color: #f9aa00;
+        color: $mainYellow;
       }
     }
   }

@@ -21,27 +21,30 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use "../style/partials/mixins" as *;
+@use "../style/partials/variables" as *;
 .hero {
   height: 800px;
   //   Immagine placeholder
   background-image: url("https://placehold.co/1500x800");
   .container {
-    display: flex;
-    flex-direction: column;
     height: 100%;
+
+    display: flex;
     justify-content: center;
+    flex-direction: column;
 
     h3 {
       max-width: 220px;
       padding: 15px 0;
       text-align: center;
-      background-color: #f7ab00;
+      background-color: $mainYellow;
       color: black;
       font-weight: bold;
     }
 
     h2 {
-      color: white;
+      color: $mainWhite;
       font-weight: 900;
       font-size: 3rem;
       max-width: 300px;
@@ -54,7 +57,7 @@ export default {
       font-weight: bold;
     }
     button:hover {
-      background-color: #f7ab00;
+      background-color: $mainYellow;
     }
   }
 }
