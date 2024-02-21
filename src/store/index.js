@@ -178,4 +178,31 @@ export const store = reactive({
     "brand-04.png",
     "brand-05.png",
   ],
+
+  footerLinks: [
+    {
+      title: "Information",
+      link1: "Bookmark",
+      link2: "Features",
+      link3: "Sitemap",
+      link4: "Lists",
+      link5: "Contact Us",
+    },
+    {
+      title: "Extras",
+      link1: "Delivery",
+      link2: "Cart",
+      link3: "Terms Conditions",
+      link4: "My Account",
+      link5: "About Us",
+    },
+  ],
+
+  paymentsMethods: [
+    "svg/american-express-svgrepo-com 10.39.13.svg",
+    "svg/discover-3-svgrepo-com 10.39.13.svg",
+    "svg/mastercard-svgrepo-com 10.39.13.svg",
+    "svg/paypal-svgrepo-com.svg",
+    "svg/visa-3-svgrepo-com 10.39.13.svg",
+  ],
 });

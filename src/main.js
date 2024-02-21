@@ -28,7 +28,20 @@ import {
   faComments,
   faPlus,
   faLink,
+  faLocationDot,
+  faPhone,
+  faEnvelope,
+  faPaperPlane,
+  faCopyright,
 } from "@fortawesome/free-solid-svg-icons";
+
+import {
+  faFacebookF,
+  faTwitter,
+  faGooglePlusG,
+  faSkype,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
 
 // * add icons to the library */
 library.add(
@@ -45,7 +58,17 @@ library.add(
   faCalendarDays,
   faComments,
   faPlus,
-  faLink
+  faLink,
+  faLocationDot,
+  faPhone,
+  faEnvelope,
+  faPaperPlane,
+  faFacebookF,
+  faTwitter,
+  faGooglePlusG,
+  faSkype,
+  faInstagram,
+  faCopyright
 );
 
 import App from "./App.vue";
