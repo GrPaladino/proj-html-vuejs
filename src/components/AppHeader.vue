@@ -5,10 +5,29 @@ export default {
     return {
       store,
       links: ["Home", "Shop", "Blog", "Media", "Shortcode", "Features"],
+
+      hover: false,
+      i: 6,
     };
   },
 
-  methods: {},
+  methods: {
+    getHoverVisible() {
+      this.hover = true;
+    },
+
+    getHoverHide() {
+      this.hover = false;
+    },
+
+    showForm(i) {
+      this.i = i;
+    },
+
+    hideForm() {
+      this.i = 6;
+    },
+  },
 };
 </script>
 
@@ -41,8 +60,23 @@ export default {
         </div>
         <div class="links">
           <ul>
-            <li v-for="(link, index) in links">
-              <a href="#">{{ link }}</a>
+            <li
+              @mouseenter="getHoverVisible()"
+              @mouseleave="getHoverHide()"
+              v-for="(link, index) in links"
+              class="main-link p-relative"
+            >
+              <a @mouseenter="showForm(index)" href="#">{{ link }}</a>
+
+              <div
+                :class="index == i ? 'd-block' : 'd-none'"
+                @mouseleave="hideForm()"
+                class="form-hover"
+              >
+                <li><a href="#">Left Sidebar</a></li>
+                <li><a href="#">Right Sidebar</a></li>
+                <li><a href="#">Full Width</a></li>
+              </div>
             </li>
           </ul>
         </div>
@@ -79,14 +113,43 @@ export default {
 .header {
   min-height: 100px;
 
+  .p-relative {
+    position: relative;
+  }
+
   ul {
     display: flex;
 
     li {
-      margin-right: 2rem;
+      width: 90px;
+      margin: 0;
+      text-align: center;
     }
+
     li:hover {
       color: $mainYellow;
+    }
+
+    .form-hover {
+      width: 90px;
+      padding: 10px;
+      background-color: $mainBgColor;
+      display: flex;
+      flex-direction: column;
+
+      position: absolute;
+      top: 25px;
+      left: 0;
+
+      li {
+        text-align: start;
+        margin: 0;
+        color: $mainGrey;
+      }
+
+      li:hover {
+        color: $mainYellow;
+      }
     }
   }
   .upper-header {
@@ -116,6 +179,18 @@ export default {
 
       .yellow {
         color: $mainYellow;
+      }
+
+      .rigth-items ul {
+        @include d-flex-center;
+        & li {
+          width: 0px;
+          margin-left: 2rem;
+        }
+
+        li:last-child {
+          width: 73px;
+        }
       }
     }
   }

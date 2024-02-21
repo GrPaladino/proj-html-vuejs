@@ -26,6 +26,7 @@ export default {
 @use "../style/partials/variables" as *;
 .game {
   min-height: 200px;
+  cursor: pointer;
   position: relative;
 
   .info {

@@ -322,6 +322,7 @@ section.blog {
       border: 1px solid rgb(63, 62, 62);
       font-size: 0.9rem;
       margin-bottom: 2rem;
+      cursor: pointer;
     }
 
     h4:hover {
@@ -353,6 +354,7 @@ section.blog {
     .arrow.arrow-left {
       position: absolute;
       top: 34%;
+      cursor: pointer;
     }
     .arrow.arrow-right {
       position: absolute;

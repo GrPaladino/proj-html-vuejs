@@ -182,6 +182,10 @@ export default {
           font-size: 0.7rem;
         }
 
+        li:hover {
+          color: $mainYellow;
+        }
+
         .icon {
           color: $mainYellow;
           margin-right: 1rem;
@@ -223,6 +227,10 @@ export default {
       .payments img {
         width: 25px;
         margin-left: 0.5rem;
+      }
+
+      .payments img:hover {
+        color: $mainYellow;
       }
     }
   }

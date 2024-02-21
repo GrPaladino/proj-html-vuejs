@@ -68,6 +68,7 @@ export default {
   .hover-icon {
     position: relative;
     top: -37%;
+    cursor: pointer;
   }
   .hover-icon .left,
   .hover-icon .right {
