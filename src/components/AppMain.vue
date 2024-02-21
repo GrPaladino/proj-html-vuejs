@@ -354,7 +354,6 @@ section.blog {
     .arrow.arrow-left {
       position: absolute;
       top: 34%;
-      cursor: pointer;
     }
     .arrow.arrow-right {
       position: absolute;
@@ -377,6 +376,7 @@ section.blog {
       .icon {
         margin: auto;
         padding-top: 5px;
+        cursor: pointer;
       }
     }
   }

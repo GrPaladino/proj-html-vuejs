@@ -165,6 +165,9 @@ export default {
 
         .info {
           margin-top: -30px;
+          span {
+            color: $mainGrey;
+          }
         }
 
         h4 {
